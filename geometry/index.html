@@ -12,7 +12,7 @@
   <meta content="Bikeshed version d9bd89757, updated Thu Mar 23 10:06:53 2023 -0700" name="generator">
   <link href="https://www.w3.org/TR/geometry-1/" rel="canonical">
   <meta content="Active code page: 65001
-1c0b8b340766da889e0ff23fb35d2355e721e122" name="document-revision">
+92e34ff589eb21f4edbf60de53038d9ebcedf82a" name="document-revision">
 <style>
 a.selected-text-file-an-issue {
   position: fixed;
@@ -1019,7 +1019,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"><a class="logo" href="https://www.w3.org/"> <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72"> </a> </p>
    <h1 class="p-name no-ref" id="title">Geometry Interfaces Module Level 1</h1>
-   <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2024-10-30">30 October 2024</time></p>
+   <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">Editor’s Draft</a>, <time class="dt-updated" datetime="2024-10-31">31 October 2024</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -1092,7 +1092,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
     <li><a href="#DOMRectList"><span class="secno">4</span> <span class="content">The DOMRectList interface</span></a>
     <li><a href="#DOMQuad"><span class="secno">5</span> <span class="content">The DOMQuad interface</span></a>
     <li>
-     <a href="#DOMMatrix"><span class="secno">6</span> <span class="content">The DOMMatrix interfaces</span></a>
+     <a href="#DOMMatrix"><span class="secno">6</span> <span class="content">DOMMatrix 接口</span></a>
      <ol class="toc">
       <li><a href="#dommatrixinit-dictionary"><span class="secno">6.1</span> <span class="content">DOMMatrix2DInit and DOMMatrixInit dictionaries</span></a>
       <li><a href="#dommatrix-parse"><span class="secno">6.2</span> <span class="content">Parsing a string into an abstract matrix</span></a>
@@ -1595,9 +1595,9 @@ equivalent to the attribute values of the following <code class="idl"><a data-li
     rectangle represents the bounding rectangle returned by the <code class="idl"><a data-link-type="idl" href="#dom-domquad-getbounds" id="ref-for-dom-domquad-getbounds①">getBounds()</a></code> method of the <code class="idl"><a data-link-type="idl" href="#domquad" id="ref-for-domquad①⑤">DOMQuad</a></code>.</figcaption>
     </figure>
    </div>
-   <h2 class="heading settled" data-level="6" id="DOMMatrix"><span class="secno">6. </span><span class="content">The DOMMatrix interfaces</span><a class="self-link" href="#DOMMatrix"></a></h2>
-   <p>The <code class="idl"><a data-link-type="idl" href="#dommatrix" id="ref-for-dommatrix①">DOMMatrix</a></code> and <code class="idl"><a data-link-type="idl" href="#dommatrixreadonly" id="ref-for-dommatrixreadonly">DOMMatrixReadOnly</a></code> interfaces each represent a mathematical <dfn class="dfn-paneled caniuse-paneled" data-dfn-type="dfn" data-noexport id="matrix">matrix</dfn> with the purpose of describing transformations in a graphical
-context. The following sections describe the details of the interface.</p>
+   <h2 class="heading settled" data-level="6" id="DOMMatrix"><span class="secno">6. </span><span class="content">DOMMatrix 接口</span><a class="self-link" href="#DOMMatrix"></a></h2>
+   <p><code class="idl"><a data-link-type="idl" href="#dommatrix" id="ref-for-dommatrix①">DOMMatrix</a></code> 和 <code class="idl"><a data-link-type="idl" href="#dommatrixreadonly" id="ref-for-dommatrixreadonly">DOMMatrixReadOnly</a></code> 两个接口都表示一个数学矩阵(mathematical <dfn class="dfn-paneled caniuse-paneled" data-dfn-type="dfn" data-noexport id="matrix">matrix</dfn> )，用于在图形上下文中描述变换
+(transformations)。以下部分描述了接口的详细信息。</p>
    <figure>
     <math display="block">
      <mrow>
@@ -1713,7 +1713,7 @@ context. The following sections describe the details of the interface.</p>
       </mfenced>
      </mrow>
     </math>
-    <figcaption>A <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="4x4-abstract-matrix">4x4 abstract matrix</dfn> with items <var>m<sub>11</sub></var> to <var>m<sub>44</sub></var>.</figcaption>
+    <figcaption>一个4x4抽象矩阵( <dfn class="dfn-paneled" data-dfn-type="dfn" data-noexport id="4x4-abstract-matrix">4x4 abstract matrix</dfn> ) ，包含 <var>m<sub>11</sub></var> 至 <var>m<sub>44</sub></var> 项。 </figcaption>
    </figure>
    <p>In the following sections, terms have the following meaning:</p>
    <dl>
@@ -3791,7 +3791,7 @@ for their careful reviews, comments, and corrections.</p>
     <li><a href="#ref-for-serializable">2. The DOMPoint interfaces</a> <a href="#ref-for-serializable①">(2)</a>
     <li><a href="#ref-for-serializable②">3. The DOMRect interfaces</a> <a href="#ref-for-serializable③">(2)</a>
     <li><a href="#ref-for-serializable④">5. The DOMQuad interface</a>
-    <li><a href="#ref-for-serializable⑤">6. The DOMMatrix interfaces</a> <a href="#ref-for-serializable⑥">(2)</a>
+    <li><a href="#ref-for-serializable⑤">6. DOMMatrix 接口</a> <a href="#ref-for-serializable⑥">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-d1f0a86fd49be388d8b0159e241a1172" class="dfn-panel" data-for="d1f0a86fd49be388d8b0159e241a1172" id="infopanel-for-d1f0a86fd49be388d8b0159e241a1172">
@@ -3854,7 +3854,7 @@ for their careful reviews, comments, and corrections.</p>
   <aside aria-labelledby="infopaneltitle-for-d0f238a61de9310f1738a214749fab18" class="dfn-panel" data-for="d0f238a61de9310f1738a214749fab18" id="infopanel-for-d0f238a61de9310f1738a214749fab18">
    <span id="infopaneltitle-for-d0f238a61de9310f1738a214749fab18" style="display:none">Info about the 'DOMString' external reference.</span><a href="https://webidl.spec.whatwg.org/#idl-DOMString">https://webidl.spec.whatwg.org/#idl-DOMString</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-idl-DOMString">6. The DOMMatrix interfaces</a> <a href="#ref-for-idl-DOMString①">(2)</a> <a href="#ref-for-idl-DOMString②">(3)</a>
+    <li><a href="#ref-for-idl-DOMString">6. DOMMatrix 接口</a> <a href="#ref-for-idl-DOMString①">(2)</a> <a href="#ref-for-idl-DOMString②">(3)</a>
     <li><a href="#ref-for-idl-DOMString③">6.3. Creating DOMMatrixReadOnly and DOMMatrix objects</a>
     <li><a href="#ref-for-idl-DOMString④">Changes since last publication</a>
    </ul>
@@ -3865,7 +3865,7 @@ for their careful reviews, comments, and corrections.</p>
     <li><a href="#ref-for-Default">2. The DOMPoint interfaces</a>
     <li><a href="#ref-for-Default①">3. The DOMRect interfaces</a>
     <li><a href="#ref-for-Default②">5. The DOMQuad interface</a>
-    <li><a href="#ref-for-Default③">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-Default③">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dde049eb112f043fc45407ec0d4cb457" class="dfn-panel" data-for="dde049eb112f043fc45407ec0d4cb457" id="infopanel-for-dde049eb112f043fc45407ec0d4cb457">
@@ -3875,20 +3875,20 @@ for their careful reviews, comments, and corrections.</p>
     <li><a href="#ref-for-Exposed②">3. The DOMRect interfaces</a> <a href="#ref-for-Exposed③">(2)</a>
     <li><a href="#ref-for-Exposed④">4. The DOMRectList interface</a>
     <li><a href="#ref-for-Exposed⑤">5. The DOMQuad interface</a>
-    <li><a href="#ref-for-Exposed⑥">6. The DOMMatrix interfaces</a> <a href="#ref-for-Exposed⑦">(2)</a> <a href="#ref-for-Exposed⑧">(3)</a> <a href="#ref-for-Exposed⑨">(4)</a>
+    <li><a href="#ref-for-Exposed⑥">6. DOMMatrix 接口</a> <a href="#ref-for-Exposed⑦">(2)</a> <a href="#ref-for-Exposed⑧">(3)</a> <a href="#ref-for-Exposed⑨">(4)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-239c03b36afd7db097e4f112cedf2dc3" class="dfn-panel" data-for="239c03b36afd7db097e4f112cedf2dc3" id="infopanel-for-239c03b36afd7db097e4f112cedf2dc3">
    <span id="infopaneltitle-for-239c03b36afd7db097e4f112cedf2dc3" style="display:none">Info about the 'Float32Array' external reference.</span><a href="https://webidl.spec.whatwg.org/#idl-Float32Array">https://webidl.spec.whatwg.org/#idl-Float32Array</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-idl-Float32Array">6. The DOMMatrix interfaces</a> <a href="#ref-for-idl-Float32Array①">(2)</a> <a href="#ref-for-idl-Float32Array②">(3)</a>
+    <li><a href="#ref-for-idl-Float32Array">6. DOMMatrix 接口</a> <a href="#ref-for-idl-Float32Array①">(2)</a> <a href="#ref-for-idl-Float32Array②">(3)</a>
     <li><a href="#ref-for-idl-Float32Array③">6.5. Immutable transformation methods</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-6c26c1110c9782681f8d20438fed98dd" class="dfn-panel" data-for="6c26c1110c9782681f8d20438fed98dd" id="infopanel-for-6c26c1110c9782681f8d20438fed98dd">
    <span id="infopaneltitle-for-6c26c1110c9782681f8d20438fed98dd" style="display:none">Info about the 'Float64Array' external reference.</span><a href="https://webidl.spec.whatwg.org/#idl-Float64Array">https://webidl.spec.whatwg.org/#idl-Float64Array</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-idl-Float64Array">6. The DOMMatrix interfaces</a> <a href="#ref-for-idl-Float64Array①">(2)</a> <a href="#ref-for-idl-Float64Array②">(3)</a>
+    <li><a href="#ref-for-idl-Float64Array">6. DOMMatrix 接口</a> <a href="#ref-for-idl-Float64Array①">(2)</a> <a href="#ref-for-idl-Float64Array②">(3)</a>
     <li><a href="#ref-for-idl-Float64Array③">6.5. Immutable transformation methods</a>
    </ul>
   </aside>
@@ -3909,7 +3909,7 @@ for their careful reviews, comments, and corrections.</p>
    <ul>
     <li><a href="#ref-for-LegacyWindowAlias">2. The DOMPoint interfaces</a>
     <li><a href="#ref-for-LegacyWindowAlias①">3. The DOMRect interfaces</a>
-    <li><a href="#ref-for-LegacyWindowAlias②">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-LegacyWindowAlias②">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-5bbf3aaea2bf2faaae7ffd02c20237e0" class="dfn-panel" data-for="5bbf3aaea2bf2faaae7ffd02c20237e0" id="infopanel-for-5bbf3aaea2bf2faaae7ffd02c20237e0">
@@ -3918,7 +3918,7 @@ for their careful reviews, comments, and corrections.</p>
     <li><a href="#ref-for-NewObject">2. The DOMPoint interfaces</a> <a href="#ref-for-NewObject①">(2)</a> <a href="#ref-for-NewObject②">(3)</a>
     <li><a href="#ref-for-NewObject③">3. The DOMRect interfaces</a> <a href="#ref-for-NewObject④">(2)</a>
     <li><a href="#ref-for-NewObject⑤">5. The DOMQuad interface</a> <a href="#ref-for-NewObject⑥">(2)</a> <a href="#ref-for-NewObject⑦">(3)</a>
-    <li><a href="#ref-for-NewObject⑧">6. The DOMMatrix interfaces</a> <a href="#ref-for-NewObject⑨">(2)</a> <a href="#ref-for-NewObject①⓪">(3)</a> <a href="#ref-for-NewObject①①">(4)</a> <a href="#ref-for-NewObject①②">(5)</a> <a href="#ref-for-NewObject①③">(6)</a> <a href="#ref-for-NewObject①④">(7)</a> <a href="#ref-for-NewObject①⑤">(8)</a> <a href="#ref-for-NewObject①⑥">(9)</a> <a href="#ref-for-NewObject①⑦">(10)</a> <a href="#ref-for-NewObject①⑧">(11)</a> <a href="#ref-for-NewObject①⑨">(12)</a> <a href="#ref-for-NewObject②⓪">(13)</a> <a href="#ref-for-NewObject②①">(14)</a> <a href="#ref-for-NewObject②②">(15)</a> <a href="#ref-for-NewObject②③">(16)</a> <a href="#ref-for-NewObject②④">(17)</a> <a href="#ref-for-NewObject②⑤">(18)</a> <a href="#ref-for-NewObject②⑥">(19)</a> <a href="#ref-for-NewObject②⑦">(20)</a> <a href="#ref-for-NewObject②⑧">(21)</a> <a href="#ref-for-NewObject②⑨">(22)</a>
+    <li><a href="#ref-for-NewObject⑧">6. DOMMatrix 接口</a> <a href="#ref-for-NewObject⑨">(2)</a> <a href="#ref-for-NewObject①⓪">(3)</a> <a href="#ref-for-NewObject①①">(4)</a> <a href="#ref-for-NewObject①②">(5)</a> <a href="#ref-for-NewObject①③">(6)</a> <a href="#ref-for-NewObject①④">(7)</a> <a href="#ref-for-NewObject①⑤">(8)</a> <a href="#ref-for-NewObject①⑥">(9)</a> <a href="#ref-for-NewObject①⑦">(10)</a> <a href="#ref-for-NewObject①⑧">(11)</a> <a href="#ref-for-NewObject①⑨">(12)</a> <a href="#ref-for-NewObject②⓪">(13)</a> <a href="#ref-for-NewObject②①">(14)</a> <a href="#ref-for-NewObject②②">(15)</a> <a href="#ref-for-NewObject②③">(16)</a> <a href="#ref-for-NewObject②④">(17)</a> <a href="#ref-for-NewObject②⑤">(18)</a> <a href="#ref-for-NewObject②⑥">(19)</a> <a href="#ref-for-NewObject②⑦">(20)</a> <a href="#ref-for-NewObject②⑧">(21)</a> <a href="#ref-for-NewObject②⑨">(22)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-f572762cd4679aeacd36722d99d2b741" class="dfn-panel" data-for="f572762cd4679aeacd36722d99d2b741" id="infopanel-for-f572762cd4679aeacd36722d99d2b741">
@@ -3945,7 +3945,7 @@ for their careful reviews, comments, and corrections.</p>
   <aside aria-labelledby="infopaneltitle-for-f8062b07e25ed0281f5cbfb9a54070b4" class="dfn-panel" data-for="f8062b07e25ed0281f5cbfb9a54070b4" id="infopanel-for-f8062b07e25ed0281f5cbfb9a54070b4">
    <span id="infopaneltitle-for-f8062b07e25ed0281f5cbfb9a54070b4" style="display:none">Info about the 'boolean' external reference.</span><a href="https://webidl.spec.whatwg.org/#idl-boolean">https://webidl.spec.whatwg.org/#idl-boolean</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-idl-boolean">6. The DOMMatrix interfaces</a> <a href="#ref-for-idl-boolean①">(2)</a> <a href="#ref-for-idl-boolean②">(3)</a>
+    <li><a href="#ref-for-idl-boolean">6. DOMMatrix 接口</a> <a href="#ref-for-idl-boolean①">(2)</a> <a href="#ref-for-idl-boolean②">(3)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-5039223412f0d0a24ee17570f82d3d59" class="dfn-panel" data-for="5039223412f0d0a24ee17570f82d3d59" id="infopanel-for-5039223412f0d0a24ee17570f82d3d59">
@@ -3954,13 +3954,13 @@ for their careful reviews, comments, and corrections.</p>
     <li><a href="#ref-for-idl-object">2. The DOMPoint interfaces</a>
     <li><a href="#ref-for-idl-object①">3. The DOMRect interfaces</a>
     <li><a href="#ref-for-idl-object②">5. The DOMQuad interface</a>
-    <li><a href="#ref-for-idl-object③">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-idl-object③">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-38ab7db52e46bed36993204c29f67202" class="dfn-panel" data-for="38ab7db52e46bed36993204c29f67202" id="infopanel-for-38ab7db52e46bed36993204c29f67202">
    <span id="infopaneltitle-for-38ab7db52e46bed36993204c29f67202" style="display:none">Info about the 'sequence' external reference.</span><a href="https://webidl.spec.whatwg.org/#idl-sequence">https://webidl.spec.whatwg.org/#idl-sequence</a><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-idl-sequence">6. The DOMMatrix interfaces</a> <a href="#ref-for-idl-sequence①">(2)</a>
+    <li><a href="#ref-for-idl-sequence">6. DOMMatrix 接口</a> <a href="#ref-for-idl-sequence①">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-22b5f40e14e1e08a5b5fc776eeb8eb77" class="dfn-panel" data-for="22b5f40e14e1e08a5b5fc776eeb8eb77" id="infopanel-for-22b5f40e14e1e08a5b5fc776eeb8eb77">
@@ -3968,7 +3968,7 @@ for their careful reviews, comments, and corrections.</p>
    <ul>
     <li><a href="#ref-for-idl-unrestricted-double">2. The DOMPoint interfaces</a> <a href="#ref-for-idl-unrestricted-double①">(2)</a> <a href="#ref-for-idl-unrestricted-double②">(3)</a> <a href="#ref-for-idl-unrestricted-double③">(4)</a> <a href="#ref-for-idl-unrestricted-double④">(5)</a> <a href="#ref-for-idl-unrestricted-double⑤">(6)</a> <a href="#ref-for-idl-unrestricted-double⑥">(7)</a> <a href="#ref-for-idl-unrestricted-double⑦">(8)</a> <a href="#ref-for-idl-unrestricted-double⑧">(9)</a> <a href="#ref-for-idl-unrestricted-double⑨">(10)</a> <a href="#ref-for-idl-unrestricted-double①⓪">(11)</a> <a href="#ref-for-idl-unrestricted-double①①">(12)</a> <a href="#ref-for-idl-unrestricted-double①②">(13)</a> <a href="#ref-for-idl-unrestricted-double①③">(14)</a> <a href="#ref-for-idl-unrestricted-double①④">(15)</a> <a href="#ref-for-idl-unrestricted-double①⑤">(16)</a> <a href="#ref-for-idl-unrestricted-double①⑥">(17)</a> <a href="#ref-for-idl-unrestricted-double①⑦">(18)</a> <a href="#ref-for-idl-unrestricted-double①⑧">(19)</a> <a href="#ref-for-idl-unrestricted-double①⑨">(20)</a>
     <li><a href="#ref-for-idl-unrestricted-double②⓪">3. The DOMRect interfaces</a> <a href="#ref-for-idl-unrestricted-double②①">(2)</a> <a href="#ref-for-idl-unrestricted-double②②">(3)</a> <a href="#ref-for-idl-unrestricted-double②③">(4)</a> <a href="#ref-for-idl-unrestricted-double②④">(5)</a> <a href="#ref-for-idl-unrestricted-double②⑤">(6)</a> <a href="#ref-for-idl-unrestricted-double②⑥">(7)</a> <a href="#ref-for-idl-unrestricted-double②⑦">(8)</a> <a href="#ref-for-idl-unrestricted-double②⑧">(9)</a> <a href="#ref-for-idl-unrestricted-double②⑨">(10)</a> <a href="#ref-for-idl-unrestricted-double③⓪">(11)</a> <a href="#ref-for-idl-unrestricted-double③①">(12)</a> <a href="#ref-for-idl-unrestricted-double③②">(13)</a> <a href="#ref-for-idl-unrestricted-double③③">(14)</a> <a href="#ref-for-idl-unrestricted-double③④">(15)</a> <a href="#ref-for-idl-unrestricted-double③⑤">(16)</a> <a href="#ref-for-idl-unrestricted-double③⑥">(17)</a> <a href="#ref-for-idl-unrestricted-double③⑦">(18)</a> <a href="#ref-for-idl-unrestricted-double③⑧">(19)</a> <a href="#ref-for-idl-unrestricted-double③⑨">(20)</a> <a href="#ref-for-idl-unrestricted-double④⓪">(21)</a> <a href="#ref-for-idl-unrestricted-double④①">(22)</a> <a href="#ref-for-idl-unrestricted-double④②">(23)</a> <a href="#ref-for-idl-unrestricted-double④③">(24)</a>
-    <li><a href="#ref-for-idl-unrestricted-double④④">6. The DOMMatrix interfaces</a> <a href="#ref-for-idl-unrestricted-double④⑤">(2)</a> <a href="#ref-for-idl-unrestricted-double④⑥">(3)</a> <a href="#ref-for-idl-unrestricted-double④⑦">(4)</a> <a href="#ref-for-idl-unrestricted-double④⑧">(5)</a> <a href="#ref-for-idl-unrestricted-double④⑨">(6)</a> <a href="#ref-for-idl-unrestricted-double⑤⓪">(7)</a> <a href="#ref-for-idl-unrestricted-double⑤①">(8)</a> <a href="#ref-for-idl-unrestricted-double⑤②">(9)</a> <a href="#ref-for-idl-unrestricted-double⑤③">(10)</a> <a href="#ref-for-idl-unrestricted-double⑤④">(11)</a> <a href="#ref-for-idl-unrestricted-double⑤⑤">(12)</a> <a href="#ref-for-idl-unrestricted-double⑤⑥">(13)</a> <a href="#ref-for-idl-unrestricted-double⑤⑦">(14)</a> <a href="#ref-for-idl-unrestricted-double⑤⑧">(15)</a> <a href="#ref-for-idl-unrestricted-double⑤⑨">(16)</a> <a href="#ref-for-idl-unrestricted-double⑥⓪">(17)</a> <a href="#ref-for-idl-unrestricted-double⑥①">(18)</a> <a href="#ref-for-idl-unrestricted-double⑥②">(19)</a> <a href="#ref-for-idl-unrestricted-double⑥③">(20)</a> <a href="#ref-for-idl-unrestricted-double⑥④">(21)</a> <a href="#ref-for-idl-unrestricted-double⑥⑤">(22)</a> <a href="#ref-for-idl-unrestricted-double⑥⑥">(23)</a> <a href="#ref-for-idl-unrestricted-double⑥⑦">(24)</a> <a href="#ref-for-idl-unrestricted-double⑥⑧">(25)</a> <a href="#ref-for-idl-unrestricted-double⑥⑨">(26)</a> <a href="#ref-for-idl-unrestricted-double⑦⓪">(27)</a> <a href="#ref-for-idl-unrestricted-double⑦①">(28)</a> <a href="#ref-for-idl-unrestricted-double⑦②">(29)</a> <a href="#ref-for-idl-unrestricted-double⑦③">(30)</a> <a href="#ref-for-idl-unrestricted-double⑦④">(31)</a> <a href="#ref-for-idl-unrestricted-double⑦⑤">(32)</a> <a href="#ref-for-idl-unrestricted-double⑦⑥">(33)</a> <a href="#ref-for-idl-unrestricted-double⑦⑦">(34)</a> <a href="#ref-for-idl-unrestricted-double⑦⑧">(35)</a> <a href="#ref-for-idl-unrestricted-double⑦⑨">(36)</a> <a href="#ref-for-idl-unrestricted-double⑧⓪">(37)</a> <a href="#ref-for-idl-unrestricted-double⑧①">(38)</a> <a href="#ref-for-idl-unrestricted-double⑧②">(39)</a> <a href="#ref-for-idl-unrestricted-double⑧③">(40)</a> <a href="#ref-for-idl-unrestricted-double⑧④">(41)</a> <a href="#ref-for-idl-unrestricted-double⑧⑤">(42)</a> <a href="#ref-for-idl-unrestricted-double⑧⑥">(43)</a> <a href="#ref-for-idl-unrestricted-double⑧⑦">(44)</a> <a href="#ref-for-idl-unrestricted-double⑧⑧">(45)</a> <a href="#ref-for-idl-unrestricted-double⑧⑨">(46)</a> <a href="#ref-for-idl-unrestricted-double⑨⓪">(47)</a> <a href="#ref-for-idl-unrestricted-double⑨①">(48)</a> <a href="#ref-for-idl-unrestricted-double⑨②">(49)</a> <a href="#ref-for-idl-unrestricted-double⑨③">(50)</a> <a href="#ref-for-idl-unrestricted-double⑨④">(51)</a> <a href="#ref-for-idl-unrestricted-double⑨⑤">(52)</a> <a href="#ref-for-idl-unrestricted-double⑨⑥">(53)</a> <a href="#ref-for-idl-unrestricted-double⑨⑦">(54)</a> <a href="#ref-for-idl-unrestricted-double⑨⑧">(55)</a> <a href="#ref-for-idl-unrestricted-double⑨⑨">(56)</a> <a href="#ref-for-idl-unrestricted-double①⓪⓪">(57)</a> <a href="#ref-for-idl-unrestricted-double①⓪①">(58)</a> <a href="#ref-for-idl-unrestricted-double①⓪②">(59)</a> <a href="#ref-for-idl-unrestricted-double①⓪③">(60)</a> <a href="#ref-for-idl-unrestricted-double①⓪④">(61)</a> <a href="#ref-for-idl-unrestricted-double①⓪⑤">(62)</a> <a href="#ref-for-idl-unrestricted-double①⓪⑥">(63)</a> <a href="#ref-for-idl-unrestricted-double①⓪⑦">(64)</a> <a href="#ref-for-idl-unrestricted-double①⓪⑧">(65)</a> <a href="#ref-for-idl-unrestricted-double①⓪⑨">(66)</a> <a href="#ref-for-idl-unrestricted-double①①⓪">(67)</a> <a href="#ref-for-idl-unrestricted-double①①①">(68)</a> <a href="#ref-for-idl-unrestricted-double①①②">(69)</a> <a href="#ref-for-idl-unrestricted-double①①③">(70)</a> <a href="#ref-for-idl-unrestricted-double①①④">(71)</a> <a href="#ref-for-idl-unrestricted-double①①⑤">(72)</a> <a href="#ref-for-idl-unrestricted-double①①⑥">(73)</a> <a href="#ref-for-idl-unrestricted-double①①⑦">(74)</a> <a href="#ref-for-idl-unrestricted-double①①⑧">(75)</a> <a href="#ref-for-idl-unrestricted-double①①⑨">(76)</a> <a href="#ref-for-idl-unrestricted-double①②⓪">(77)</a> <a href="#ref-for-idl-unrestricted-double①②①">(78)</a> <a href="#ref-for-idl-unrestricted-double①②②">(79)</a> <a href="#ref-for-idl-unrestricted-double①②③">(80)</a> <a href="#ref-for-idl-unrestricted-double①②④">(81)</a> <a href="#ref-for-idl-unrestricted-double①②⑤">(82)</a> <a href="#ref-for-idl-unrestricted-double①②⑥">(83)</a> <a href="#ref-for-idl-unrestricted-double①②⑦">(84)</a> <a href="#ref-for-idl-unrestricted-double①②⑧">(85)</a> <a href="#ref-for-idl-unrestricted-double①②⑨">(86)</a> <a href="#ref-for-idl-unrestricted-double①③⓪">(87)</a> <a href="#ref-for-idl-unrestricted-double①③①">(88)</a> <a href="#ref-for-idl-unrestricted-double①③②">(89)</a> <a href="#ref-for-idl-unrestricted-double①③③">(90)</a> <a href="#ref-for-idl-unrestricted-double①③④">(91)</a> <a href="#ref-for-idl-unrestricted-double①③⑤">(92)</a> <a href="#ref-for-idl-unrestricted-double①③⑥">(93)</a> <a href="#ref-for-idl-unrestricted-double①③⑦">(94)</a> <a href="#ref-for-idl-unrestricted-double①③⑧">(95)</a> <a href="#ref-for-idl-unrestricted-double①③⑨">(96)</a> <a href="#ref-for-idl-unrestricted-double①④⓪">(97)</a> <a href="#ref-for-idl-unrestricted-double①④①">(98)</a> <a href="#ref-for-idl-unrestricted-double①④②">(99)</a> <a href="#ref-for-idl-unrestricted-double①④③">(100)</a> <a href="#ref-for-idl-unrestricted-double①④④">(101)</a> <a href="#ref-for-idl-unrestricted-double①④⑤">(102)</a> <a href="#ref-for-idl-unrestricted-double①④⑥">(103)</a> <a href="#ref-for-idl-unrestricted-double①④⑦">(104)</a> <a href="#ref-for-idl-unrestricted-double①④⑧">(105)</a> <a href="#ref-for-idl-unrestricted-double①④⑨">(106)</a> <a href="#ref-for-idl-unrestricted-double①⑤⓪">(107)</a> <a href="#ref-for-idl-unrestricted-double①⑤①">(108)</a> <a href="#ref-for-idl-unrestricted-double①⑤②">(109)</a> <a href="#ref-for-idl-unrestricted-double①⑤③">(110)</a> <a href="#ref-for-idl-unrestricted-double①⑤④">(111)</a> <a href="#ref-for-idl-unrestricted-double①⑤⑤">(112)</a> <a href="#ref-for-idl-unrestricted-double①⑤⑥">(113)</a> <a href="#ref-for-idl-unrestricted-double①⑤⑦">(114)</a> <a href="#ref-for-idl-unrestricted-double①⑤⑧">(115)</a> <a href="#ref-for-idl-unrestricted-double①⑤⑨">(116)</a> <a href="#ref-for-idl-unrestricted-double①⑥⓪">(117)</a> <a href="#ref-for-idl-unrestricted-double①⑥①">(118)</a>
+    <li><a href="#ref-for-idl-unrestricted-double④④">6. DOMMatrix 接口</a> <a href="#ref-for-idl-unrestricted-double④⑤">(2)</a> <a href="#ref-for-idl-unrestricted-double④⑥">(3)</a> <a href="#ref-for-idl-unrestricted-double④⑦">(4)</a> <a href="#ref-for-idl-unrestricted-double④⑧">(5)</a> <a href="#ref-for-idl-unrestricted-double④⑨">(6)</a> <a href="#ref-for-idl-unrestricted-double⑤⓪">(7)</a> <a href="#ref-for-idl-unrestricted-double⑤①">(8)</a> <a href="#ref-for-idl-unrestricted-double⑤②">(9)</a> <a href="#ref-for-idl-unrestricted-double⑤③">(10)</a> <a href="#ref-for-idl-unrestricted-double⑤④">(11)</a> <a href="#ref-for-idl-unrestricted-double⑤⑤">(12)</a> <a href="#ref-for-idl-unrestricted-double⑤⑥">(13)</a> <a href="#ref-for-idl-unrestricted-double⑤⑦">(14)</a> <a href="#ref-for-idl-unrestricted-double⑤⑧">(15)</a> <a href="#ref-for-idl-unrestricted-double⑤⑨">(16)</a> <a href="#ref-for-idl-unrestricted-double⑥⓪">(17)</a> <a href="#ref-for-idl-unrestricted-double⑥①">(18)</a> <a href="#ref-for-idl-unrestricted-double⑥②">(19)</a> <a href="#ref-for-idl-unrestricted-double⑥③">(20)</a> <a href="#ref-for-idl-unrestricted-double⑥④">(21)</a> <a href="#ref-for-idl-unrestricted-double⑥⑤">(22)</a> <a href="#ref-for-idl-unrestricted-double⑥⑥">(23)</a> <a href="#ref-for-idl-unrestricted-double⑥⑦">(24)</a> <a href="#ref-for-idl-unrestricted-double⑥⑧">(25)</a> <a href="#ref-for-idl-unrestricted-double⑥⑨">(26)</a> <a href="#ref-for-idl-unrestricted-double⑦⓪">(27)</a> <a href="#ref-for-idl-unrestricted-double⑦①">(28)</a> <a href="#ref-for-idl-unrestricted-double⑦②">(29)</a> <a href="#ref-for-idl-unrestricted-double⑦③">(30)</a> <a href="#ref-for-idl-unrestricted-double⑦④">(31)</a> <a href="#ref-for-idl-unrestricted-double⑦⑤">(32)</a> <a href="#ref-for-idl-unrestricted-double⑦⑥">(33)</a> <a href="#ref-for-idl-unrestricted-double⑦⑦">(34)</a> <a href="#ref-for-idl-unrestricted-double⑦⑧">(35)</a> <a href="#ref-for-idl-unrestricted-double⑦⑨">(36)</a> <a href="#ref-for-idl-unrestricted-double⑧⓪">(37)</a> <a href="#ref-for-idl-unrestricted-double⑧①">(38)</a> <a href="#ref-for-idl-unrestricted-double⑧②">(39)</a> <a href="#ref-for-idl-unrestricted-double⑧③">(40)</a> <a href="#ref-for-idl-unrestricted-double⑧④">(41)</a> <a href="#ref-for-idl-unrestricted-double⑧⑤">(42)</a> <a href="#ref-for-idl-unrestricted-double⑧⑥">(43)</a> <a href="#ref-for-idl-unrestricted-double⑧⑦">(44)</a> <a href="#ref-for-idl-unrestricted-double⑧⑧">(45)</a> <a href="#ref-for-idl-unrestricted-double⑧⑨">(46)</a> <a href="#ref-for-idl-unrestricted-double⑨⓪">(47)</a> <a href="#ref-for-idl-unrestricted-double⑨①">(48)</a> <a href="#ref-for-idl-unrestricted-double⑨②">(49)</a> <a href="#ref-for-idl-unrestricted-double⑨③">(50)</a> <a href="#ref-for-idl-unrestricted-double⑨④">(51)</a> <a href="#ref-for-idl-unrestricted-double⑨⑤">(52)</a> <a href="#ref-for-idl-unrestricted-double⑨⑥">(53)</a> <a href="#ref-for-idl-unrestricted-double⑨⑦">(54)</a> <a href="#ref-for-idl-unrestricted-double⑨⑧">(55)</a> <a href="#ref-for-idl-unrestricted-double⑨⑨">(56)</a> <a href="#ref-for-idl-unrestricted-double①⓪⓪">(57)</a> <a href="#ref-for-idl-unrestricted-double①⓪①">(58)</a> <a href="#ref-for-idl-unrestricted-double①⓪②">(59)</a> <a href="#ref-for-idl-unrestricted-double①⓪③">(60)</a> <a href="#ref-for-idl-unrestricted-double①⓪④">(61)</a> <a href="#ref-for-idl-unrestricted-double①⓪⑤">(62)</a> <a href="#ref-for-idl-unrestricted-double①⓪⑥">(63)</a> <a href="#ref-for-idl-unrestricted-double①⓪⑦">(64)</a> <a href="#ref-for-idl-unrestricted-double①⓪⑧">(65)</a> <a href="#ref-for-idl-unrestricted-double①⓪⑨">(66)</a> <a href="#ref-for-idl-unrestricted-double①①⓪">(67)</a> <a href="#ref-for-idl-unrestricted-double①①①">(68)</a> <a href="#ref-for-idl-unrestricted-double①①②">(69)</a> <a href="#ref-for-idl-unrestricted-double①①③">(70)</a> <a href="#ref-for-idl-unrestricted-double①①④">(71)</a> <a href="#ref-for-idl-unrestricted-double①①⑤">(72)</a> <a href="#ref-for-idl-unrestricted-double①①⑥">(73)</a> <a href="#ref-for-idl-unrestricted-double①①⑦">(74)</a> <a href="#ref-for-idl-unrestricted-double①①⑧">(75)</a> <a href="#ref-for-idl-unrestricted-double①①⑨">(76)</a> <a href="#ref-for-idl-unrestricted-double①②⓪">(77)</a> <a href="#ref-for-idl-unrestricted-double①②①">(78)</a> <a href="#ref-for-idl-unrestricted-double①②②">(79)</a> <a href="#ref-for-idl-unrestricted-double①②③">(80)</a> <a href="#ref-for-idl-unrestricted-double①②④">(81)</a> <a href="#ref-for-idl-unrestricted-double①②⑤">(82)</a> <a href="#ref-for-idl-unrestricted-double①②⑥">(83)</a> <a href="#ref-for-idl-unrestricted-double①②⑦">(84)</a> <a href="#ref-for-idl-unrestricted-double①②⑧">(85)</a> <a href="#ref-for-idl-unrestricted-double①②⑨">(86)</a> <a href="#ref-for-idl-unrestricted-double①③⓪">(87)</a> <a href="#ref-for-idl-unrestricted-double①③①">(88)</a> <a href="#ref-for-idl-unrestricted-double①③②">(89)</a> <a href="#ref-for-idl-unrestricted-double①③③">(90)</a> <a href="#ref-for-idl-unrestricted-double①③④">(91)</a> <a href="#ref-for-idl-unrestricted-double①③⑤">(92)</a> <a href="#ref-for-idl-unrestricted-double①③⑥">(93)</a> <a href="#ref-for-idl-unrestricted-double①③⑦">(94)</a> <a href="#ref-for-idl-unrestricted-double①③⑧">(95)</a> <a href="#ref-for-idl-unrestricted-double①③⑨">(96)</a> <a href="#ref-for-idl-unrestricted-double①④⓪">(97)</a> <a href="#ref-for-idl-unrestricted-double①④①">(98)</a> <a href="#ref-for-idl-unrestricted-double①④②">(99)</a> <a href="#ref-for-idl-unrestricted-double①④③">(100)</a> <a href="#ref-for-idl-unrestricted-double①④④">(101)</a> <a href="#ref-for-idl-unrestricted-double①④⑤">(102)</a> <a href="#ref-for-idl-unrestricted-double①④⑥">(103)</a> <a href="#ref-for-idl-unrestricted-double①④⑦">(104)</a> <a href="#ref-for-idl-unrestricted-double①④⑧">(105)</a> <a href="#ref-for-idl-unrestricted-double①④⑨">(106)</a> <a href="#ref-for-idl-unrestricted-double①⑤⓪">(107)</a> <a href="#ref-for-idl-unrestricted-double①⑤①">(108)</a> <a href="#ref-for-idl-unrestricted-double①⑤②">(109)</a> <a href="#ref-for-idl-unrestricted-double①⑤③">(110)</a> <a href="#ref-for-idl-unrestricted-double①⑤④">(111)</a> <a href="#ref-for-idl-unrestricted-double①⑤⑤">(112)</a> <a href="#ref-for-idl-unrestricted-double①⑤⑥">(113)</a> <a href="#ref-for-idl-unrestricted-double①⑤⑦">(114)</a> <a href="#ref-for-idl-unrestricted-double①⑤⑧">(115)</a> <a href="#ref-for-idl-unrestricted-double①⑤⑨">(116)</a> <a href="#ref-for-idl-unrestricted-double①⑥⓪">(117)</a> <a href="#ref-for-idl-unrestricted-double①⑥①">(118)</a>
     <li><a href="#ref-for-idl-unrestricted-double①⑥②">Document conventions</a> <a href="#ref-for-idl-unrestricted-double①⑥③">(2)</a>
    </ul>
   </aside>
@@ -4397,7 +4397,7 @@ for their careful reviews, comments, and corrections.</p>
     <li><a href="#ref-for-dompoint">2. The DOMPoint interfaces</a> <a href="#ref-for-dompoint①">(2)</a> <a href="#ref-for-dompoint②">(3)</a> <a href="#ref-for-dompoint③">(4)</a> <a href="#ref-for-dompoint④">(5)</a> <a href="#ref-for-dompoint⑤">(6)</a> <a href="#ref-for-dompoint⑥">(7)</a> <a href="#ref-for-dompoint⑦">(8)</a> <a href="#ref-for-dompoint⑧">(9)</a> <a href="#ref-for-dompoint⑨">(10)</a> <a href="#ref-for-dompoint①⓪">(11)</a> <a href="#ref-for-dompoint①①">(12)</a> <a href="#ref-for-dompoint①②">(13)</a>
     <li><a href="#ref-for-dompoint①③">2.1. Transforming a point with a matrix</a>
     <li><a href="#ref-for-dompoint①④">5. The DOMQuad interface</a> <a href="#ref-for-dompoint①⑤">(2)</a> <a href="#ref-for-dompoint①⑥">(3)</a> <a href="#ref-for-dompoint①⑦">(4)</a> <a href="#ref-for-dompoint①⑧">(5)</a> <a href="#ref-for-dompoint①⑨">(6)</a> <a href="#ref-for-dompoint②⓪">(7)</a> <a href="#ref-for-dompoint②①">(8)</a> <a href="#ref-for-dompoint②②">(9)</a> <a href="#ref-for-dompoint②③">(10)</a> <a href="#ref-for-dompoint②④">(11)</a> <a href="#ref-for-dompoint②⑤">(12)</a> <a href="#ref-for-dompoint②⑥">(13)</a> <a href="#ref-for-dompoint②⑦">(14)</a> <a href="#ref-for-dompoint②⑧">(15)</a> <a href="#ref-for-dompoint②⑨">(16)</a> <a href="#ref-for-dompoint③⓪">(17)</a>
-    <li><a href="#ref-for-dompoint③①">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dompoint③①">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dompoint③②">7. Structured serialization</a> <a href="#ref-for-dompoint③③">(2)</a>
     <li><a href="#ref-for-dompoint③④">10.2. SVG</a>
     <li><a href="#ref-for-dompoint③⑤">Changes since last publication</a>
@@ -4408,7 +4408,7 @@ for their careful reviews, comments, and corrections.</p>
    <ul>
     <li><a href="#ref-for-dictdef-dompointinit">2. The DOMPoint interfaces</a> <a href="#ref-for-dictdef-dompointinit①">(2)</a>
     <li><a href="#ref-for-dictdef-dompointinit②">5. The DOMQuad interface</a> <a href="#ref-for-dictdef-dompointinit③">(2)</a> <a href="#ref-for-dictdef-dompointinit④">(3)</a> <a href="#ref-for-dictdef-dompointinit⑤">(4)</a> <a href="#ref-for-dictdef-dompointinit⑥">(5)</a> <a href="#ref-for-dictdef-dompointinit⑦">(6)</a> <a href="#ref-for-dictdef-dompointinit⑧">(7)</a> <a href="#ref-for-dictdef-dompointinit⑨">(8)</a> <a href="#ref-for-dictdef-dompointinit①⓪">(9)</a>
-    <li><a href="#ref-for-dictdef-dompointinit①①">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dictdef-dompointinit①①">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dompointinit-x" class="dfn-panel" data-for="dom-dompointinit-x" id="infopanel-for-dom-dompointinit-x">
@@ -4898,7 +4898,7 @@ a DOMQuadInit dictionary' definition.</span><b><a href="#create-a-domquad-from-t
   <aside aria-labelledby="infopaneltitle-for-dommatrixreadonly" class="dfn-panel" data-for="dommatrixreadonly" id="infopanel-for-dommatrixreadonly">
    <span id="infopaneltitle-for-dommatrixreadonly" style="display:none">Info about the 'DOMMatrixReadOnly' definition.</span><b><a href="#dommatrixreadonly">#dommatrixreadonly</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dommatrixreadonly">6. The DOMMatrix interfaces</a> <a href="#ref-for-dommatrixreadonly①">(2)</a> <a href="#ref-for-dommatrixreadonly②">(3)</a> <a href="#ref-for-dommatrixreadonly③">(4)</a> <a href="#ref-for-dommatrixreadonly④">(5)</a> <a href="#ref-for-dommatrixreadonly⑤">(6)</a> <a href="#ref-for-dommatrixreadonly⑥">(7)</a> <a href="#ref-for-dommatrixreadonly⑦">(8)</a> <a href="#ref-for-dommatrixreadonly⑧">(9)</a>
+    <li><a href="#ref-for-dommatrixreadonly">6. DOMMatrix 接口</a> <a href="#ref-for-dommatrixreadonly①">(2)</a> <a href="#ref-for-dommatrixreadonly②">(3)</a> <a href="#ref-for-dommatrixreadonly③">(4)</a> <a href="#ref-for-dommatrixreadonly④">(5)</a> <a href="#ref-for-dommatrixreadonly⑤">(6)</a> <a href="#ref-for-dommatrixreadonly⑥">(7)</a> <a href="#ref-for-dommatrixreadonly⑦">(8)</a> <a href="#ref-for-dommatrixreadonly⑧">(9)</a>
     <li><a href="#ref-for-dommatrixreadonly⑨">6.3. Creating DOMMatrixReadOnly and DOMMatrix objects</a> <a href="#ref-for-dommatrixreadonly①⓪">(2)</a> <a href="#ref-for-dommatrixreadonly①①">(3)</a> <a href="#ref-for-dommatrixreadonly①②">(4)</a> <a href="#ref-for-dommatrixreadonly①③">(5)</a> <a href="#ref-for-dommatrixreadonly①④">(6)</a> <a href="#ref-for-dommatrixreadonly①⑤">(7)</a> <a href="#ref-for-dommatrixreadonly①⑥">(8)</a> <a href="#ref-for-dommatrixreadonly①⑦">(9)</a> <a href="#ref-for-dommatrixreadonly①⑧">(10)</a> <a href="#ref-for-dommatrixreadonly①⑨">(11)</a> <a href="#ref-for-dommatrixreadonly②⓪">(12)</a> <a href="#ref-for-dommatrixreadonly②①">(13)</a> <a href="#ref-for-dommatrixreadonly②②">(14)</a> <a href="#ref-for-dommatrixreadonly②③">(15)</a> <a href="#ref-for-dommatrixreadonly②④">(16)</a> <a href="#ref-for-dommatrixreadonly②⑤">(17)</a>
     <li><a href="#ref-for-dommatrixreadonly②⑥">6.4. DOMMatrix attributes</a> <a href="#ref-for-dommatrixreadonly②⑦">(2)</a>
     <li><a href="#ref-for-dommatrixreadonly②⑧">7. Structured serialization</a> <a href="#ref-for-dommatrixreadonly②⑨">(2)</a> <a href="#ref-for-dommatrixreadonly③⓪">(3)</a>
@@ -4925,7 +4925,7 @@ a DOMQuadInit dictionary' definition.</span><b><a href="#create-a-domquad-from-t
    <span id="infopaneltitle-for-dommatrix" style="display:none">Info about the 'DOMMatrix' definition.</span><b><a href="#dommatrix">#dommatrix</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-dommatrix">2. The DOMPoint interfaces</a>
-    <li><a href="#ref-for-dommatrix①">6. The DOMMatrix interfaces</a> <a href="#ref-for-dommatrix②">(2)</a> <a href="#ref-for-dommatrix③">(3)</a> <a href="#ref-for-dommatrix④">(4)</a> <a href="#ref-for-dommatrix⑤">(5)</a> <a href="#ref-for-dommatrix⑥">(6)</a> <a href="#ref-for-dommatrix⑦">(7)</a> <a href="#ref-for-dommatrix⑧">(8)</a> <a href="#ref-for-dommatrix⑨">(9)</a> <a href="#ref-for-dommatrix①⓪">(10)</a> <a href="#ref-for-dommatrix①①">(11)</a> <a href="#ref-for-dommatrix①②">(12)</a> <a href="#ref-for-dommatrix①③">(13)</a> <a href="#ref-for-dommatrix①④">(14)</a> <a href="#ref-for-dommatrix①⑤">(15)</a> <a href="#ref-for-dommatrix①⑥">(16)</a> <a href="#ref-for-dommatrix①⑦">(17)</a> <a href="#ref-for-dommatrix①⑧">(18)</a> <a href="#ref-for-dommatrix①⑨">(19)</a> <a href="#ref-for-dommatrix②⓪">(20)</a> <a href="#ref-for-dommatrix②①">(21)</a> <a href="#ref-for-dommatrix②②">(22)</a> <a href="#ref-for-dommatrix②③">(23)</a> <a href="#ref-for-dommatrix②④">(24)</a> <a href="#ref-for-dommatrix②⑤">(25)</a> <a href="#ref-for-dommatrix②⑥">(26)</a> <a href="#ref-for-dommatrix②⑦">(27)</a> <a href="#ref-for-dommatrix②⑧">(28)</a> <a href="#ref-for-dommatrix②⑨">(29)</a> <a href="#ref-for-dommatrix③⓪">(30)</a> <a href="#ref-for-dommatrix③①">(31)</a>
+    <li><a href="#ref-for-dommatrix①">6. DOMMatrix 接口</a> <a href="#ref-for-dommatrix②">(2)</a> <a href="#ref-for-dommatrix③">(3)</a> <a href="#ref-for-dommatrix④">(4)</a> <a href="#ref-for-dommatrix⑤">(5)</a> <a href="#ref-for-dommatrix⑥">(6)</a> <a href="#ref-for-dommatrix⑦">(7)</a> <a href="#ref-for-dommatrix⑧">(8)</a> <a href="#ref-for-dommatrix⑨">(9)</a> <a href="#ref-for-dommatrix①⓪">(10)</a> <a href="#ref-for-dommatrix①①">(11)</a> <a href="#ref-for-dommatrix①②">(12)</a> <a href="#ref-for-dommatrix①③">(13)</a> <a href="#ref-for-dommatrix①④">(14)</a> <a href="#ref-for-dommatrix①⑤">(15)</a> <a href="#ref-for-dommatrix①⑥">(16)</a> <a href="#ref-for-dommatrix①⑦">(17)</a> <a href="#ref-for-dommatrix①⑧">(18)</a> <a href="#ref-for-dommatrix①⑨">(19)</a> <a href="#ref-for-dommatrix②⓪">(20)</a> <a href="#ref-for-dommatrix②①">(21)</a> <a href="#ref-for-dommatrix②②">(22)</a> <a href="#ref-for-dommatrix②③">(23)</a> <a href="#ref-for-dommatrix②④">(24)</a> <a href="#ref-for-dommatrix②⑤">(25)</a> <a href="#ref-for-dommatrix②⑥">(26)</a> <a href="#ref-for-dommatrix②⑦">(27)</a> <a href="#ref-for-dommatrix②⑧">(28)</a> <a href="#ref-for-dommatrix②⑨">(29)</a> <a href="#ref-for-dommatrix③⓪">(30)</a> <a href="#ref-for-dommatrix③①">(31)</a>
     <li><a href="#ref-for-dommatrix③②">6.3. Creating DOMMatrixReadOnly and DOMMatrix objects</a> <a href="#ref-for-dommatrix③③">(2)</a> <a href="#ref-for-dommatrix③④">(3)</a> <a href="#ref-for-dommatrix③⑤">(4)</a> <a href="#ref-for-dommatrix③⑥">(5)</a> <a href="#ref-for-dommatrix③⑦">(6)</a> <a href="#ref-for-dommatrix③⑧">(7)</a> <a href="#ref-for-dommatrix③⑨">(8)</a> <a href="#ref-for-dommatrix④⓪">(9)</a> <a href="#ref-for-dommatrix④①">(10)</a> <a href="#ref-for-dommatrix④②">(11)</a> <a href="#ref-for-dommatrix④③">(12)</a> <a href="#ref-for-dommatrix④④">(13)</a> <a href="#ref-for-dommatrix④⑤">(14)</a> <a href="#ref-for-dommatrix④⑥">(15)</a> <a href="#ref-for-dommatrix④⑦">(16)</a> <a href="#ref-for-dommatrix④⑧">(17)</a>
     <li><a href="#ref-for-dommatrix④⑨">6.4. DOMMatrix attributes</a> <a href="#ref-for-dommatrix⑤⓪">(2)</a> <a href="#ref-for-dommatrix⑤①">(3)</a> <a href="#ref-for-dommatrix⑤②">(4)</a> <a href="#ref-for-dommatrix⑤③">(5)</a> <a href="#ref-for-dommatrix⑤④">(6)</a> <a href="#ref-for-dommatrix⑤⑤">(7)</a> <a href="#ref-for-dommatrix⑤⑥">(8)</a> <a href="#ref-for-dommatrix⑤⑦">(9)</a> <a href="#ref-for-dommatrix⑤⑧">(10)</a> <a href="#ref-for-dommatrix⑤⑨">(11)</a> <a href="#ref-for-dommatrix⑥⓪">(12)</a> <a href="#ref-for-dommatrix⑥①">(13)</a> <a href="#ref-for-dommatrix⑥②">(14)</a> <a href="#ref-for-dommatrix⑥③">(15)</a> <a href="#ref-for-dommatrix⑥④">(16)</a> <a href="#ref-for-dommatrix⑥⑤">(17)</a>
     <li><a href="#ref-for-dommatrix⑥⑥">6.5. Immutable transformation methods</a>
@@ -4940,7 +4940,7 @@ a DOMQuadInit dictionary' definition.</span><b><a href="#create-a-domquad-from-t
   <aside aria-labelledby="infopaneltitle-for-dictdef-dommatrix2dinit" class="dfn-panel" data-for="dictdef-dommatrix2dinit" id="infopanel-for-dictdef-dommatrix2dinit">
    <span id="infopaneltitle-for-dictdef-dommatrix2dinit" style="display:none">Info about the 'DOMMatrix2DInit' definition.</span><b><a href="#dictdef-dommatrix2dinit">#dictdef-dommatrix2dinit</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dictdef-dommatrix2dinit">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dictdef-dommatrix2dinit">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dictdef-dommatrix2dinit①">6.1. DOMMatrix2DInit and DOMMatrixInit dictionaries</a>
    </ul>
   </aside>
@@ -5026,7 +5026,7 @@ a DOMQuadInit dictionary' definition.</span><b><a href="#create-a-domquad-from-t
    <span id="infopaneltitle-for-dictdef-dommatrixinit" style="display:none">Info about the 'DOMMatrixInit' definition.</span><b><a href="#dictdef-dommatrixinit">#dictdef-dommatrixinit</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-dictdef-dommatrixinit">2. The DOMPoint interfaces</a>
-    <li><a href="#ref-for-dictdef-dommatrixinit①">6. The DOMMatrix interfaces</a> <a href="#ref-for-dictdef-dommatrixinit②">(2)</a> <a href="#ref-for-dictdef-dommatrixinit③">(3)</a> <a href="#ref-for-dictdef-dommatrixinit④">(4)</a> <a href="#ref-for-dictdef-dommatrixinit⑤">(5)</a>
+    <li><a href="#ref-for-dictdef-dommatrixinit①">6. DOMMatrix 接口</a> <a href="#ref-for-dictdef-dommatrixinit②">(2)</a> <a href="#ref-for-dictdef-dommatrixinit③">(3)</a> <a href="#ref-for-dictdef-dommatrixinit④">(4)</a> <a href="#ref-for-dictdef-dommatrixinit⑤">(5)</a>
     <li><a href="#ref-for-dictdef-dommatrixinit⑥">6.1. DOMMatrix2DInit and DOMMatrixInit dictionaries</a> <a href="#ref-for-dictdef-dommatrixinit⑦">(2)</a>
     <li><a href="#ref-for-dictdef-dommatrixinit⑧">Changes since last publication</a>
    </ul>
@@ -5280,25 +5280,25 @@ element' definition.</span><b><a href="#matrix-m43-element">#matrix-m43-element<
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-dommatrixreadonly" class="dfn-panel" data-for="dom-dommatrixreadonly-dommatrixreadonly" id="infopanel-for-dom-dommatrixreadonly-dommatrixreadonly">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-dommatrixreadonly" style="display:none">Info about the 'DOMMatrixReadOnly(init)' definition.</span><b><a href="#dom-dommatrixreadonly-dommatrixreadonly">#dom-dommatrixreadonly-dommatrixreadonly</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-dommatrixreadonly">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-dommatrixreadonly">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-dommatrix" class="dfn-panel" data-for="dom-dommatrix-dommatrix" id="infopanel-for-dom-dommatrix-dommatrix">
    <span id="infopaneltitle-for-dom-dommatrix-dommatrix" style="display:none">Info about the 'DOMMatrix(init)' definition.</span><b><a href="#dom-dommatrix-dommatrix">#dom-dommatrix-dommatrix</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-dommatrix">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-dommatrix">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-frommatrix" class="dfn-panel" data-for="dom-dommatrixreadonly-frommatrix" id="infopanel-for-dom-dommatrixreadonly-frommatrix">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-frommatrix" style="display:none">Info about the 'fromMatrix(other)' definition.</span><b><a href="#dom-dommatrixreadonly-frommatrix">#dom-dommatrixreadonly-frommatrix</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-frommatrix">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-frommatrix">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-frommatrix" class="dfn-panel" data-for="dom-dommatrix-frommatrix" id="infopanel-for-dom-dommatrix-frommatrix">
    <span id="infopaneltitle-for-dom-dommatrix-frommatrix" style="display:none">Info about the 'fromMatrix(other)' definition.</span><b><a href="#dom-dommatrix-frommatrix">#dom-dommatrix-frommatrix</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-frommatrix">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-frommatrix">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-create-a-dommatrixreadonly-from-the-dictionary" class="dfn-panel" data-for="create-a-dommatrixreadonly-from-the-dictionary" id="infopanel-for-create-a-dommatrixreadonly-from-the-dictionary">
@@ -5319,31 +5319,31 @@ DOMMatrixReadOnly from a dictionary' definition.</span><b><a href="#create-a-dom
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-fromfloat32array" class="dfn-panel" data-for="dom-dommatrixreadonly-fromfloat32array" id="infopanel-for-dom-dommatrixreadonly-fromfloat32array">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-fromfloat32array" style="display:none">Info about the 'fromFloat32Array(array32)' definition.</span><b><a href="#dom-dommatrixreadonly-fromfloat32array">#dom-dommatrixreadonly-fromfloat32array</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-fromfloat32array">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-fromfloat32array">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-fromfloat32array" class="dfn-panel" data-for="dom-dommatrix-fromfloat32array" id="infopanel-for-dom-dommatrix-fromfloat32array">
    <span id="infopaneltitle-for-dom-dommatrix-fromfloat32array" style="display:none">Info about the 'fromFloat32Array(array32)' definition.</span><b><a href="#dom-dommatrix-fromfloat32array">#dom-dommatrix-fromfloat32array</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-fromfloat32array">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-fromfloat32array">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-fromfloat64array" class="dfn-panel" data-for="dom-dommatrixreadonly-fromfloat64array" id="infopanel-for-dom-dommatrixreadonly-fromfloat64array">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-fromfloat64array" style="display:none">Info about the 'fromFloat64Array(array64)' definition.</span><b><a href="#dom-dommatrixreadonly-fromfloat64array">#dom-dommatrixreadonly-fromfloat64array</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-fromfloat64array">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-fromfloat64array">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-fromfloat64array" class="dfn-panel" data-for="dom-dommatrix-fromfloat64array" id="infopanel-for-dom-dommatrix-fromfloat64array">
    <span id="infopaneltitle-for-dom-dommatrix-fromfloat64array" style="display:none">Info about the 'fromFloat64Array(array64)' definition.</span><b><a href="#dom-dommatrix-fromfloat64array">#dom-dommatrix-fromfloat64array</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-fromfloat64array">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-fromfloat64array">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m11" class="dfn-panel" data-for="dom-dommatrixreadonly-m11" id="infopanel-for-dom-dommatrixreadonly-m11">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m11" style="display:none">Info about the 'm11' definition.</span><b><a href="#dom-dommatrixreadonly-m11">#dom-dommatrixreadonly-m11</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m11">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m11①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m11">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m11①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m11②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-m11③">(2)</a> <a href="#ref-for-dom-dommatrixreadonly-m11④">(3)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m11⑤">6.5. Immutable transformation methods</a> <a href="#ref-for-dom-dommatrixreadonly-m11⑥">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m11⑦">6.6. Mutable transformation methods</a>
@@ -5352,56 +5352,56 @@ DOMMatrixReadOnly from a dictionary' definition.</span><b><a href="#create-a-dom
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-a" class="dfn-panel" data-for="dom-dommatrixreadonly-a" id="infopanel-for-dom-dommatrixreadonly-a">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-a" style="display:none">Info about the 'a' definition.</span><b><a href="#dom-dommatrixreadonly-a">#dom-dommatrixreadonly-a</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-a">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-a①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-a">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-a①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-a②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-a③">(2)</a> <a href="#ref-for-dom-dommatrixreadonly-a④">(3)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m12" class="dfn-panel" data-for="dom-dommatrixreadonly-m12" id="infopanel-for-dom-dommatrixreadonly-m12">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m12" style="display:none">Info about the 'm12' definition.</span><b><a href="#dom-dommatrixreadonly-m12">#dom-dommatrixreadonly-m12</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m12">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m12①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m12">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m12①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m12②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-m12③">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-b" class="dfn-panel" data-for="dom-dommatrixreadonly-b" id="infopanel-for-dom-dommatrixreadonly-b">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-b" style="display:none">Info about the 'b' definition.</span><b><a href="#dom-dommatrixreadonly-b">#dom-dommatrixreadonly-b</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-b">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-b①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-b">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-b①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-b②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-b③">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m13" class="dfn-panel" data-for="dom-dommatrixreadonly-m13" id="infopanel-for-dom-dommatrixreadonly-m13">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m13" style="display:none">Info about the 'm13' definition.</span><b><a href="#dom-dommatrixreadonly-m13">#dom-dommatrixreadonly-m13</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m13">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m13①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m13">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m13①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m13②">6.4. DOMMatrix attributes</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m14" class="dfn-panel" data-for="dom-dommatrixreadonly-m14" id="infopanel-for-dom-dommatrixreadonly-m14">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m14" style="display:none">Info about the 'm14' definition.</span><b><a href="#dom-dommatrixreadonly-m14">#dom-dommatrixreadonly-m14</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m14">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m14①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m14">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m14①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m14②">6.4. DOMMatrix attributes</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m21" class="dfn-panel" data-for="dom-dommatrixreadonly-m21" id="infopanel-for-dom-dommatrixreadonly-m21">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m21" style="display:none">Info about the 'm21' definition.</span><b><a href="#dom-dommatrixreadonly-m21">#dom-dommatrixreadonly-m21</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m21">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m21①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m21">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m21①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m21②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-m21③">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-c" class="dfn-panel" data-for="dom-dommatrixreadonly-c" id="infopanel-for-dom-dommatrixreadonly-c">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-c" style="display:none">Info about the 'c' definition.</span><b><a href="#dom-dommatrixreadonly-c">#dom-dommatrixreadonly-c</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-c">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-c①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-c">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-c①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-c②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-c③">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m22" class="dfn-panel" data-for="dom-dommatrixreadonly-m22" id="infopanel-for-dom-dommatrixreadonly-m22">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m22" style="display:none">Info about the 'm22' definition.</span><b><a href="#dom-dommatrixreadonly-m22">#dom-dommatrixreadonly-m22</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m22">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m22①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m22">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m22①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m22②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-m22③">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m22④">6.6. Mutable transformation methods</a>
    </ul>
@@ -5409,42 +5409,42 @@ DOMMatrixReadOnly from a dictionary' definition.</span><b><a href="#create-a-dom
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-d" class="dfn-panel" data-for="dom-dommatrixreadonly-d" id="infopanel-for-dom-dommatrixreadonly-d">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-d" style="display:none">Info about the 'd' definition.</span><b><a href="#dom-dommatrixreadonly-d">#dom-dommatrixreadonly-d</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-d">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-d①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-d">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-d①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-d②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-d③">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m23" class="dfn-panel" data-for="dom-dommatrixreadonly-m23" id="infopanel-for-dom-dommatrixreadonly-m23">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m23" style="display:none">Info about the 'm23' definition.</span><b><a href="#dom-dommatrixreadonly-m23">#dom-dommatrixreadonly-m23</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m23">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m23①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m23">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m23①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m23②">6.4. DOMMatrix attributes</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m24" class="dfn-panel" data-for="dom-dommatrixreadonly-m24" id="infopanel-for-dom-dommatrixreadonly-m24">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m24" style="display:none">Info about the 'm24' definition.</span><b><a href="#dom-dommatrixreadonly-m24">#dom-dommatrixreadonly-m24</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m24">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m24①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m24">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m24①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m24②">6.4. DOMMatrix attributes</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m31" class="dfn-panel" data-for="dom-dommatrixreadonly-m31" id="infopanel-for-dom-dommatrixreadonly-m31">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m31" style="display:none">Info about the 'm31' definition.</span><b><a href="#dom-dommatrixreadonly-m31">#dom-dommatrixreadonly-m31</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m31">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m31①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m31">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m31①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m31②">6.4. DOMMatrix attributes</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m32" class="dfn-panel" data-for="dom-dommatrixreadonly-m32" id="infopanel-for-dom-dommatrixreadonly-m32">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m32" style="display:none">Info about the 'm32' definition.</span><b><a href="#dom-dommatrixreadonly-m32">#dom-dommatrixreadonly-m32</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m32">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m32①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m32">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m32①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m32②">6.4. DOMMatrix attributes</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m33" class="dfn-panel" data-for="dom-dommatrixreadonly-m33" id="infopanel-for-dom-dommatrixreadonly-m33">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m33" style="display:none">Info about the 'm33' definition.</span><b><a href="#dom-dommatrixreadonly-m33">#dom-dommatrixreadonly-m33</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m33">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m33①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m33">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m33①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m33②">6.4. DOMMatrix attributes</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m33③">6.6. Mutable transformation methods</a>
    </ul>
@@ -5452,49 +5452,49 @@ DOMMatrixReadOnly from a dictionary' definition.</span><b><a href="#create-a-dom
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m34" class="dfn-panel" data-for="dom-dommatrixreadonly-m34" id="infopanel-for-dom-dommatrixreadonly-m34">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m34" style="display:none">Info about the 'm34' definition.</span><b><a href="#dom-dommatrixreadonly-m34">#dom-dommatrixreadonly-m34</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m34">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m34①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m34">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m34①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m34②">6.4. DOMMatrix attributes</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m41" class="dfn-panel" data-for="dom-dommatrixreadonly-m41" id="infopanel-for-dom-dommatrixreadonly-m41">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m41" style="display:none">Info about the 'm41' definition.</span><b><a href="#dom-dommatrixreadonly-m41">#dom-dommatrixreadonly-m41</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m41">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m41①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m41">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m41①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m41②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-m41③">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-e" class="dfn-panel" data-for="dom-dommatrixreadonly-e" id="infopanel-for-dom-dommatrixreadonly-e">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-e" style="display:none">Info about the 'e' definition.</span><b><a href="#dom-dommatrixreadonly-e">#dom-dommatrixreadonly-e</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-e">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-e①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-e">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-e①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-e②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-e③">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m42" class="dfn-panel" data-for="dom-dommatrixreadonly-m42" id="infopanel-for-dom-dommatrixreadonly-m42">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m42" style="display:none">Info about the 'm42' definition.</span><b><a href="#dom-dommatrixreadonly-m42">#dom-dommatrixreadonly-m42</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m42">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m42①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m42">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m42①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m42②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-m42③">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-f" class="dfn-panel" data-for="dom-dommatrixreadonly-f" id="infopanel-for-dom-dommatrixreadonly-f">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-f" style="display:none">Info about the 'f' definition.</span><b><a href="#dom-dommatrixreadonly-f">#dom-dommatrixreadonly-f</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-f">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-f①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-f">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-f①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-f②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-f③">(2)</a> <a href="#ref-for-dom-dommatrixreadonly-f④">(3)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m43" class="dfn-panel" data-for="dom-dommatrixreadonly-m43" id="infopanel-for-dom-dommatrixreadonly-m43">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m43" style="display:none">Info about the 'm43' definition.</span><b><a href="#dom-dommatrixreadonly-m43">#dom-dommatrixreadonly-m43</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m43">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m43①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m43">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m43①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m43②">6.4. DOMMatrix attributes</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-m44" class="dfn-panel" data-for="dom-dommatrixreadonly-m44" id="infopanel-for-dom-dommatrixreadonly-m44">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-m44" style="display:none">Info about the 'm44' definition.</span><b><a href="#dom-dommatrixreadonly-m44">#dom-dommatrixreadonly-m44</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-m44">6. The DOMMatrix interfaces</a> <a href="#ref-for-dom-dommatrixreadonly-m44①">(2)</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-m44">6. DOMMatrix 接口</a> <a href="#ref-for-dom-dommatrixreadonly-m44①">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m44②">6.4. DOMMatrix attributes</a> <a href="#ref-for-dom-dommatrixreadonly-m44③">(2)</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-m44④">6.5. Immutable transformation methods</a> <a href="#ref-for-dom-dommatrixreadonly-m44⑤">(2)</a>
    </ul>
@@ -5502,14 +5502,14 @@ DOMMatrixReadOnly from a dictionary' definition.</span><b><a href="#create-a-dom
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-is2d" class="dfn-panel" data-for="dom-dommatrixreadonly-is2d" id="infopanel-for-dom-dommatrixreadonly-is2d">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-is2d" style="display:none">Info about the 'is2D' definition.</span><b><a href="#dom-dommatrixreadonly-is2d">#dom-dommatrixreadonly-is2d</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-is2d">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-is2d">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-is2d①">Changes since last publication</a> <a href="#ref-for-dom-dommatrixreadonly-is2d②">(2)</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-isidentity" class="dfn-panel" data-for="dom-dommatrixreadonly-isidentity" id="infopanel-for-dom-dommatrixreadonly-isidentity">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-isidentity" style="display:none">Info about the 'isIdentity' definition.</span><b><a href="#dom-dommatrixreadonly-isidentity">#dom-dommatrixreadonly-isidentity</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-isidentity">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-isidentity">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-isidentity①">Changes since last publication</a>
    </ul>
   </aside>
@@ -5517,7 +5517,7 @@ DOMMatrixReadOnly from a dictionary' definition.</span><b><a href="#create-a-dom
    <span id="infopaneltitle-for-matrix-is-2d" style="display:none">Info about the 'is 2D' definition.</span><b><a href="#matrix-is-2d">#matrix-is-2d</a></b><b>Referenced in:</b>
    <ul>
     <li><a href="#ref-for-matrix-is-2d">2.1. Transforming a point with a matrix</a>
-    <li><a href="#ref-for-matrix-is-2d①">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-matrix-is-2d①">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-matrix-is-2d②">6.3. Creating DOMMatrixReadOnly and DOMMatrix objects</a> <a href="#ref-for-matrix-is-2d③">(2)</a>
     <li><a href="#ref-for-matrix-is-2d④">6.4. DOMMatrix attributes</a> <a href="#ref-for-matrix-is-2d⑤">(2)</a> <a href="#ref-for-matrix-is-2d⑥">(3)</a> <a href="#ref-for-matrix-is-2d⑦">(4)</a> <a href="#ref-for-matrix-is-2d⑧">(5)</a> <a href="#ref-for-matrix-is-2d⑨">(6)</a> <a href="#ref-for-matrix-is-2d①⓪">(7)</a> <a href="#ref-for-matrix-is-2d①①">(8)</a> <a href="#ref-for-matrix-is-2d①②">(9)</a> <a href="#ref-for-matrix-is-2d①③">(10)</a> <a href="#ref-for-matrix-is-2d①④">(11)</a> <a href="#ref-for-matrix-is-2d①⑤">(12)</a> <a href="#ref-for-matrix-is-2d①⑥">(13)</a>
     <li><a href="#ref-for-matrix-is-2d①⑦">6.5. Immutable transformation methods</a>
@@ -5528,14 +5528,14 @@ DOMMatrixReadOnly from a dictionary' definition.</span><b><a href="#create-a-dom
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-translate" class="dfn-panel" data-for="dom-dommatrixreadonly-translate" id="infopanel-for-dom-dommatrixreadonly-translate">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-translate" style="display:none">Info about the 'translate(tx, ty, tz)' definition.</span><b><a href="#dom-dommatrixreadonly-translate">#dom-dommatrixreadonly-translate</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-translate">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-translate">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-scale" class="dfn-panel" data-for="dom-dommatrixreadonly-scale" id="infopanel-for-dom-dommatrixreadonly-scale">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-scale" style="display:none">Info about the 'scale(scaleX, scaleY, scaleZ, originX,
 originY, originZ)' definition.</span><b><a href="#dom-dommatrixreadonly-scale">#dom-dommatrixreadonly-scale</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-scale">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-scale">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-scale①">6.5. Immutable transformation methods</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-scale②">Changes since last publication</a>
    </ul>
@@ -5543,112 +5543,112 @@ originY, originZ)' definition.</span><b><a href="#dom-dommatrixreadonly-scale">#
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-scalenonuniform" class="dfn-panel" data-for="dom-dommatrixreadonly-scalenonuniform" id="infopanel-for-dom-dommatrixreadonly-scalenonuniform">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-scalenonuniform" style="display:none">Info about the 'scaleNonUniform(scaleX, scaleY)' definition.</span><b><a href="#dom-dommatrixreadonly-scalenonuniform">#dom-dommatrixreadonly-scalenonuniform</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-scalenonuniform">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-scalenonuniform">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-scale3d" class="dfn-panel" data-for="dom-dommatrixreadonly-scale3d" id="infopanel-for-dom-dommatrixreadonly-scale3d">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-scale3d" style="display:none">Info about the 'scale3d(scale, originX, originY, originZ)' definition.</span><b><a href="#dom-dommatrixreadonly-scale3d">#dom-dommatrixreadonly-scale3d</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-scale3d">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-scale3d">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-rotate" class="dfn-panel" data-for="dom-dommatrixreadonly-rotate" id="infopanel-for-dom-dommatrixreadonly-rotate">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-rotate" style="display:none">Info about the 'rotate(rotX, rotY, rotZ)' definition.</span><b><a href="#dom-dommatrixreadonly-rotate">#dom-dommatrixreadonly-rotate</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-rotate">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-rotate">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-rotate①">Changes since last publication</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-rotatefromvector" class="dfn-panel" data-for="dom-dommatrixreadonly-rotatefromvector" id="infopanel-for-dom-dommatrixreadonly-rotatefromvector">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-rotatefromvector" style="display:none">Info about the 'rotateFromVector(x, y)' definition.</span><b><a href="#dom-dommatrixreadonly-rotatefromvector">#dom-dommatrixreadonly-rotatefromvector</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-rotatefromvector">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-rotatefromvector">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-rotateaxisangle" class="dfn-panel" data-for="dom-dommatrixreadonly-rotateaxisangle" id="infopanel-for-dom-dommatrixreadonly-rotateaxisangle">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-rotateaxisangle" style="display:none">Info about the 'rotateAxisAngle(x, y, z, angle)' definition.</span><b><a href="#dom-dommatrixreadonly-rotateaxisangle">#dom-dommatrixreadonly-rotateaxisangle</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-rotateaxisangle">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-rotateaxisangle">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-skewx" class="dfn-panel" data-for="dom-dommatrixreadonly-skewx" id="infopanel-for-dom-dommatrixreadonly-skewx">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-skewx" style="display:none">Info about the 'skewX(sx)' definition.</span><b><a href="#dom-dommatrixreadonly-skewx">#dom-dommatrixreadonly-skewx</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-skewx">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-skewx">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-skewy" class="dfn-panel" data-for="dom-dommatrixreadonly-skewy" id="infopanel-for-dom-dommatrixreadonly-skewy">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-skewy" style="display:none">Info about the 'skewY(sy)' definition.</span><b><a href="#dom-dommatrixreadonly-skewy">#dom-dommatrixreadonly-skewy</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-skewy">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-skewy">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-multiply" class="dfn-panel" data-for="dom-dommatrixreadonly-multiply" id="infopanel-for-dom-dommatrixreadonly-multiply">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-multiply" style="display:none">Info about the 'multiply(other)' definition.</span><b><a href="#dom-dommatrixreadonly-multiply">#dom-dommatrixreadonly-multiply</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-multiply">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-multiply">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-flipx" class="dfn-panel" data-for="dom-dommatrixreadonly-flipx" id="infopanel-for-dom-dommatrixreadonly-flipx">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-flipx" style="display:none">Info about the 'flipX()' definition.</span><b><a href="#dom-dommatrixreadonly-flipx">#dom-dommatrixreadonly-flipx</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-flipx">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-flipx">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-flipy" class="dfn-panel" data-for="dom-dommatrixreadonly-flipy" id="infopanel-for-dom-dommatrixreadonly-flipy">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-flipy" style="display:none">Info about the 'flipY()' definition.</span><b><a href="#dom-dommatrixreadonly-flipy">#dom-dommatrixreadonly-flipy</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-flipy">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-flipy">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-inverse" class="dfn-panel" data-for="dom-dommatrixreadonly-inverse" id="infopanel-for-dom-dommatrixreadonly-inverse">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-inverse" style="display:none">Info about the 'inverse()' definition.</span><b><a href="#dom-dommatrixreadonly-inverse">#dom-dommatrixreadonly-inverse</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-inverse">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-inverse">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrixreadonly-inverse①">Changes since last publication</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-transformpoint" class="dfn-panel" data-for="dom-dommatrixreadonly-transformpoint" id="infopanel-for-dom-dommatrixreadonly-transformpoint">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-transformpoint" style="display:none">Info about the 'transformPoint(point)' definition.</span><b><a href="#dom-dommatrixreadonly-transformpoint">#dom-dommatrixreadonly-transformpoint</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-transformpoint">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-transformpoint">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-tofloat32array" class="dfn-panel" data-for="dom-dommatrixreadonly-tofloat32array" id="infopanel-for-dom-dommatrixreadonly-tofloat32array">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-tofloat32array" style="display:none">Info about the 'toFloat32Array()' definition.</span><b><a href="#dom-dommatrixreadonly-tofloat32array">#dom-dommatrixreadonly-tofloat32array</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-tofloat32array">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-tofloat32array">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrixreadonly-tofloat64array" class="dfn-panel" data-for="dom-dommatrixreadonly-tofloat64array" id="infopanel-for-dom-dommatrixreadonly-tofloat64array">
    <span id="infopaneltitle-for-dom-dommatrixreadonly-tofloat64array" style="display:none">Info about the 'toFloat64Array()' definition.</span><b><a href="#dom-dommatrixreadonly-tofloat64array">#dom-dommatrixreadonly-tofloat64array</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrixreadonly-tofloat64array">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrixreadonly-tofloat64array">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dommatrixreadonly-stringification-behavior" class="dfn-panel" data-for="dommatrixreadonly-stringification-behavior" id="infopanel-for-dommatrixreadonly-stringification-behavior">
    <span id="infopaneltitle-for-dommatrixreadonly-stringification-behavior" style="display:none">Info about the 'stringification behavior' definition.</span><b><a href="#dommatrixreadonly-stringification-behavior">#dommatrixreadonly-stringification-behavior</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dommatrixreadonly-stringification-behavior">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dommatrixreadonly-stringification-behavior">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-multiplyself" class="dfn-panel" data-for="dom-dommatrix-multiplyself" id="infopanel-for-dom-dommatrix-multiplyself">
    <span id="infopaneltitle-for-dom-dommatrix-multiplyself" style="display:none">Info about the 'multiplySelf(other)' definition.</span><b><a href="#dom-dommatrix-multiplyself">#dom-dommatrix-multiplyself</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-multiplyself">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-multiplyself">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrix-multiplyself①">6.5. Immutable transformation methods</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-premultiplyself" class="dfn-panel" data-for="dom-dommatrix-premultiplyself" id="infopanel-for-dom-dommatrix-premultiplyself">
    <span id="infopaneltitle-for-dom-dommatrix-premultiplyself" style="display:none">Info about the 'preMultiplySelf(other)' definition.</span><b><a href="#dom-dommatrix-premultiplyself">#dom-dommatrix-premultiplyself</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-premultiplyself">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-premultiplyself">6. DOMMatrix 接口</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-translateself" class="dfn-panel" data-for="dom-dommatrix-translateself" id="infopanel-for-dom-dommatrix-translateself">
    <span id="infopaneltitle-for-dom-dommatrix-translateself" style="display:none">Info about the 'translateSelf(tx, ty, tz)' definition.</span><b><a href="#dom-dommatrix-translateself">#dom-dommatrix-translateself</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-translateself">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-translateself">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrix-translateself①">6.5. Immutable transformation methods</a>
     <li><a href="#ref-for-dom-dommatrix-translateself②">6.6. Mutable transformation methods</a> <a href="#ref-for-dom-dommatrix-translateself③">(2)</a> <a href="#ref-for-dom-dommatrix-translateself④">(3)</a> <a href="#ref-for-dom-dommatrix-translateself⑤">(4)</a>
     <li><a href="#ref-for-dom-dommatrix-translateself⑥">Changes since last publication</a>
@@ -5658,7 +5658,7 @@ originY, originZ)' definition.</span><b><a href="#dom-dommatrixreadonly-scale">#
    <span id="infopaneltitle-for-dom-dommatrix-scaleself" style="display:none">Info about the 'scaleSelf(scaleX, scaleY, scaleZ, originX,
 originY, originZ)' definition.</span><b><a href="#dom-dommatrix-scaleself">#dom-dommatrix-scaleself</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-scaleself">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-scaleself">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrix-scaleself①">6.5. Immutable transformation methods</a> <a href="#ref-for-dom-dommatrix-scaleself②">(2)</a>
     <li><a href="#ref-for-dom-dommatrix-scaleself③">Changes since last publication</a>
    </ul>
@@ -5667,14 +5667,14 @@ originY, originZ)' definition.</span><b><a href="#dom-dommatrix-scaleself">#dom-
    <span id="infopaneltitle-for-dom-dommatrix-scale3dself" style="display:none">Info about the 'scale3dSelf(scale, originX, originY,
 originZ)' definition.</span><b><a href="#dom-dommatrix-scale3dself">#dom-dommatrix-scale3dself</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-scale3dself">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-scale3dself">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrix-scale3dself①">6.5. Immutable transformation methods</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-rotateself" class="dfn-panel" data-for="dom-dommatrix-rotateself" id="infopanel-for-dom-dommatrix-rotateself">
    <span id="infopaneltitle-for-dom-dommatrix-rotateself" style="display:none">Info about the 'rotateSelf(rotX, rotY, rotZ)' definition.</span><b><a href="#dom-dommatrix-rotateself">#dom-dommatrix-rotateself</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-rotateself">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-rotateself">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrix-rotateself①">6.5. Immutable transformation methods</a>
     <li><a href="#ref-for-dom-dommatrix-rotateself②">Changes since last publication</a>
    </ul>
@@ -5682,35 +5682,35 @@ originZ)' definition.</span><b><a href="#dom-dommatrix-scale3dself">#dom-dommatr
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-rotatefromvectorself" class="dfn-panel" data-for="dom-dommatrix-rotatefromvectorself" id="infopanel-for-dom-dommatrix-rotatefromvectorself">
    <span id="infopaneltitle-for-dom-dommatrix-rotatefromvectorself" style="display:none">Info about the 'rotateFromVectorSelf(x, y)' definition.</span><b><a href="#dom-dommatrix-rotatefromvectorself">#dom-dommatrix-rotatefromvectorself</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-rotatefromvectorself">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-rotatefromvectorself">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrix-rotatefromvectorself①">6.5. Immutable transformation methods</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-rotateaxisangleself" class="dfn-panel" data-for="dom-dommatrix-rotateaxisangleself" id="infopanel-for-dom-dommatrix-rotateaxisangleself">
    <span id="infopaneltitle-for-dom-dommatrix-rotateaxisangleself" style="display:none">Info about the 'rotateAxisAngleSelf(x, y, z, angle)' definition.</span><b><a href="#dom-dommatrix-rotateaxisangleself">#dom-dommatrix-rotateaxisangleself</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-rotateaxisangleself">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-rotateaxisangleself">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrix-rotateaxisangleself①">6.5. Immutable transformation methods</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-skewxself" class="dfn-panel" data-for="dom-dommatrix-skewxself" id="infopanel-for-dom-dommatrix-skewxself">
    <span id="infopaneltitle-for-dom-dommatrix-skewxself" style="display:none">Info about the 'skewXSelf(sx)' definition.</span><b><a href="#dom-dommatrix-skewxself">#dom-dommatrix-skewxself</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-skewxself">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-skewxself">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrix-skewxself①">6.5. Immutable transformation methods</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-skewyself" class="dfn-panel" data-for="dom-dommatrix-skewyself" id="infopanel-for-dom-dommatrix-skewyself">
    <span id="infopaneltitle-for-dom-dommatrix-skewyself" style="display:none">Info about the 'skewYSelf(sy)' definition.</span><b><a href="#dom-dommatrix-skewyself">#dom-dommatrix-skewyself</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-skewyself">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-skewyself">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrix-skewyself①">6.5. Immutable transformation methods</a>
    </ul>
   </aside>
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-invertself" class="dfn-panel" data-for="dom-dommatrix-invertself" id="infopanel-for-dom-dommatrix-invertself">
    <span id="infopaneltitle-for-dom-dommatrix-invertself" style="display:none">Info about the 'invertSelf()' definition.</span><b><a href="#dom-dommatrix-invertself">#dom-dommatrix-invertself</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-invertself">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-invertself">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrix-invertself①">6.5. Immutable transformation methods</a>
     <li><a href="#ref-for-dom-dommatrix-invertself②">Changes since last publication</a> <a href="#ref-for-dom-dommatrix-invertself③">(2)</a>
    </ul>
@@ -5718,7 +5718,7 @@ originZ)' definition.</span><b><a href="#dom-dommatrix-scale3dself">#dom-dommatr
   <aside aria-labelledby="infopaneltitle-for-dom-dommatrix-setmatrixvalue" class="dfn-panel" data-for="dom-dommatrix-setmatrixvalue" id="infopanel-for-dom-dommatrix-setmatrixvalue">
    <span id="infopaneltitle-for-dom-dommatrix-setmatrixvalue" style="display:none">Info about the 'setMatrixValue(transformList)' definition.</span><b><a href="#dom-dommatrix-setmatrixvalue">#dom-dommatrix-setmatrixvalue</a></b><b>Referenced in:</b>
    <ul>
-    <li><a href="#ref-for-dom-dommatrix-setmatrixvalue">6. The DOMMatrix interfaces</a>
+    <li><a href="#ref-for-dom-dommatrix-setmatrixvalue">6. DOMMatrix 接口</a>
     <li><a href="#ref-for-dom-dommatrix-setmatrixvalue①">6.4. DOMMatrix attributes</a>
     <li><a href="#ref-for-dom-dommatrix-setmatrixvalue②">Changes since last publication</a> <a href="#ref-for-dom-dommatrix-setmatrixvalue③">(2)</a>
    </ul>

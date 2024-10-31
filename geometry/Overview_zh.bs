@@ -599,17 +599,30 @@ new DOMQuad({x: 40, y: 25}, {x: 180, y: 8}, {x: 210, y: 150}, {x: 10, y: 180});
 </div>
 
 
-The DOMMatrix interfaces {#DOMMatrix}
+DOMMatrix 接口 {#DOMMatrix}
 =====================================
 
-The {{DOMMatrix}} and {{DOMMatrixReadOnly}} interfaces each represent a mathematical <dfn
-caniuse=dommatrix>matrix</dfn> with the purpose of describing transformations in a graphical
-context. The following sections describe the details of the interface.
+{{DOMMatrix}} 和 {{DOMMatrixReadOnly}} 两个接口都表示一个数学矩阵(mathematical 
+<dfn caniuse=dommatrix>matrix</dfn> )，用于在图形上下文中描述变换
+(transformations)。以下部分描述了接口的详细信息。
 
 <figure>
-    <math display=block><mrow><mfenced open=[ close=] separators=,><mrow><mtable><mtr><mtd><msub><mi>m</mi><mi>11</mi></msub></mtd><mtd><msub><mi>m</mi><mi>21</mi></msub></mtd><mtd><msub><mi>m</mi><mi>31</mi></msub></mtd><mtd><msub><mi>m</mi><mi>41</mi></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mi>12</mi></msub></mtd><mtd><msub><mi>m</mi><mi>22</mi></msub></mtd><mtd><msub><mi>m</mi><mi>32</mi></msub></mtd><mtd><msub><mi>m</mi><mi>42</mi></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mi>13</mi></msub></mtd><mtd><msub><mi>m</mi><mi>23</mi></msub></mtd><mtd><msub><mi>m</mi><mi>33</mi></msub></mtd><mtd><msub><mi>m</mi><mi>43</mi></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mi>14</mi></msub></mtd><mtd><msub><mi>m</mi><mi>24</mi></msub></mtd><mtd><msub><mi>m</mi><mi>34</mi></msub></mtd><mtd><msub><mi>m</mi><mi>44</mi></msub></mtd></mtr></mtable></mrow></mfenced></mrow></math>
-    <figcaption>A <dfn>4x4 abstract matrix</dfn> with items <var
-    ignore>m<sub>11</sub></var> to <var ignore>m<sub>44</sub></var>.</figcaption>
+    <math display=block><mrow><mfenced open=[ close=] separators=,><mrow>
+    <mtable><mtr><mtd><msub><mi>m</mi><mi>11</mi></msub></mtd><mtd><msub>
+    <mi>m</mi><mi>21</mi></msub></mtd><mtd><msub><mi>m</mi><mi>31</mi></msub>
+    </mtd><mtd><msub><mi>m</mi><mi>41</mi></msub></mtd></mtr><mtr><mtd><msub>
+    <mi>m</mi><mi>12</mi></msub></mtd><mtd><msub><mi>m</mi><mi>22</mi></msub>
+    </mtd><mtd><msub><mi>m</mi><mi>32</mi></msub></mtd><mtd><msub><mi>m</mi>
+    <mi>42</mi></msub></mtd></mtr><mtr><mtd><msub><mi>m</mi><mi>13</mi></msub>
+    </mtd><mtd><msub><mi>m</mi><mi>23</mi></msub></mtd><mtd><msub><mi>m</mi>
+    <mi>33</mi></msub></mtd><mtd><msub><mi>m</mi><mi>43</mi></msub></mtd></mtr>
+    <mtr><mtd><msub><mi>m</mi><mi>14</mi></msub></mtd><mtd><msub><mi>m</mi>
+    <mi>24</mi></msub></mtd><mtd><msub><mi>m</mi><mi>34</mi></msub></mtd><mtd>
+    <msub><mi>m</mi><mi>44</mi></msub></mtd></mtr></mtable></mrow></mfenced>
+    </mrow></math>
+    <figcaption>一个4x4抽象矩阵( <dfn>4x4 abstract matrix</dfn> ) ，包含 <var
+    ignore>m<sub>11</sub></var> 至 <var ignore>m<sub>44</sub></var> 项。
+    </figcaption>
 </figure>
 
 In the following sections, terms have the following meaning:
